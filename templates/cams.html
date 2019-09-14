@@ -1,0 +1,7 @@
+<!doctype html>
+<title>DneproNet Cams</title>
+{% for cam in cams %}
+Cam {{ cam.name }}
+{{ cam.data|safe }}
+<br>
+{% endfor %}
