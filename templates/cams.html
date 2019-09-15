@@ -1,7 +1,8 @@
 <!doctype html>
 <title>DneproNet Cams</title>
 {% for cam in cams %}
+<p style="text-align:center">
 Cam {{ cam.name }}
 {{ cam.data|safe }}
-<br>
+</p>
 {% endfor %}
