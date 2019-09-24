@@ -14,7 +14,10 @@ headers = {'User-Agent': chrome_ua}
 resp = requests.get(url_cam, headers = headers, verify = False)
 
 soup = BeautifulSoup(resp.text, 'lxml')
+
+countries = { ctr['value']:ctr.text for ctr in soup.find_all('option', {'data-link': None}) }
+
 options = soup.find_all('option',{'data-link': re.compile('http.*')})
 for opt in options:
     link = re.sub(r'embed\.html.*$', 'index.m3u8', opt['data-link'])
-    print(opt['value'], opt.text, 'mpv ' + link)
+    print(countries[opt['value']], opt.text, 'mpv ' + link)
