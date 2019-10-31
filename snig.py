@@ -41,4 +41,4 @@ for cam in cams:
         url = 'https://hls.cdn.ua/sneg.info_camera/_definst_/{}.stream/playlist.m3u8'
 
     cam_num = str(num).zfill(2)
-    print(places[place], '|', cams[cam], 'mpv ' + url.format(cam_num))
+    print(places[place], '|', cams[cam], '|', 'mpv ' + url.format(cam_num))
