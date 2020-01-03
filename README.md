@@ -1,3 +1,7 @@
+Native HLS Playback https://chrome.google.com/webstore/detail/native-hls-playback/emnphkkblegpebimobpbekeedfgemhof
+
+Place | Place | Link
+----- | ----- | ----
 Дніпро | 01 Парус | mpv https://cam.dnepr.com/hls/num1.m3u8
 Дніпро | 02 Серова | mpv https://cam.dnepr.com/hls/num2.m3u8
 Дніпро | 03 Башни 1 | mpv https://cam.dnepr.com/hls/num3.m3u8
