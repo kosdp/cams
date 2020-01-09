@@ -1,4 +1,8 @@
-Native HLS Playback in Chrome https://chrome.google.com/webstore/detail/native-hls-playback/emnphkkblegpebimobpbekeedfgemhof
+Native HLS Playback
+
+Chrome https://chrome.google.com/webstore/detail/native-hls-playback/emnphkkblegpebimobpbekeedfgemhof
+
+Firefox https://addons.mozilla.org/en-US/firefox/addon/native_hls_playback/
 
 Place | Place | Link
 ----- | ----- | -----
