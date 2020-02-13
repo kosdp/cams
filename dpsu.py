@@ -22,7 +22,7 @@ results = {}
 options = soup.find_all('option',{'data-link': re.compile('http.*')})
 for opt in options:
     link = re.sub(r'embed\.html.*$', 'index.m3u8', opt['data-link'])
-    results[countries[opt['value']] + ' | ' + opt.text] = 'mpv ' + link
+    results[countries[opt['value']] + ' | ' + opt.text] = link
 
 for res in sorted(results):
     print(res, '|', results[res])

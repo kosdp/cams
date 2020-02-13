@@ -34,11 +34,11 @@ cams = { cam['href']:cam.text for cam in soup.find_all('a', {'href':re.compile('
 for cam in cams:
     place, num = cam.split('/')[2:4]
     if place == 'Bukovel':
-        bukovel = {7: 10, 72: 17, 73: 4, 74: 21, 75: 19, 76: 2, 77: 3, 78: 9, 80: 8, 81: 16, 82: 6, 84: 5, 85: 23, 86: 18, 87: 12, 88: 7, 89: 14}
+        bukovel = {7: 10, 72: 17, 73: 4, 74: 21, 75: 19, 76: 2, 77: 3, 78: 9, 79: 9, 80: 8, 81: 16, 82: 6, 84: 5, 85: 23, 86: 18, 87: 12, 88: 7, 89: 14}
         url = 'https://5c463ef86ff69.streamlock.net:10443/bukovel/{}.stream/playlist.m3u8'
         num = bukovel[int(num)]
     else:
         url = 'https://hls.cdn.ua/sneg.info_camera/_definst_/{}.stream/playlist.m3u8'
 
     cam_num = str(num).zfill(2)
-    print(places[place], '|', cams[cam], '|', 'mpv ' + url.format(cam_num))
+    print(places[place], '|', cams[cam], '|', url.format(cam_num))

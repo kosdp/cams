@@ -16,4 +16,4 @@ soup = BeautifulSoup(resp.text, 'lxml')
 cams = { cam['href']:cam.text for cam in soup.find_all('a', {'href':re.compile('^index\.php\?cam=.*$')}) }
 for cam in cams:
     if not 'нет' in cams[cam]:
-        print('Дніпро', '|', cams[cam], '|', re.sub('$', '.m3u8', re.sub('index\.php\?cam=', 'mpv https://cam.dnepr.com/hls/num', cam)))
+        print('Дніпро', '|', cams[cam], '|', re.sub('$', '.m3u8', re.sub('index\.php\?cam=', 'https://cam.dnepr.com/hls/num', cam)))
