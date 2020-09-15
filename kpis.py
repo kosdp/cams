@@ -18,4 +18,4 @@ resp = requests.get(url_cam, headers = headers, verify = False)
 soup = BeautifulSoup(resp.text, 'lxml')
 cams = { cam['href']:cam.text for cam in soup.find_all('a', {'href':re.compile('^/onlinecams/.*$')}) }
 for cam in cams:
-    print("Кам'янське", "|", cams[cam], "|", re.sub('$', '/hls/live.m3u8', re.sub('/onlinecams/kamera-', 'http://ss.kpis.com.ua/', cam)))
+    print("Кам'янське", "|", cams[cam][2:], "|", re.sub('$', '/hls/live.m3u8', re.sub('/onlinecams/kamera-', 'http://ss.kpis.com.ua/', cam)))
